@@ -32,10 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="clases.cpp">
+		<Unit filename="basedatos.h" />
+		<Unit filename="lista.cpp">
 			<Option weight="49" />
 		</Unit>
-		<Unit filename="clases.h" />
+		<Unit filename="lista.h" />
 		<Unit filename="main.cpp">
 			<Option weight="61" />
 		</Unit>

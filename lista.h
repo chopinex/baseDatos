@@ -28,8 +28,6 @@ public:
     T obtenerElemento(int);
     void eliminarElemento(T);
     void recorrerLista();
+    void agregarElementoInicio(T);
+    //void agregarElementoFin(T);
 };
-
-/*class DBEngine{
-
-};*/

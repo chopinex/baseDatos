@@ -1,4 +1,4 @@
-#include "clases.h"
+#include "lista.h"
 #include <iostream>
 using namespace std;
 
@@ -87,18 +87,27 @@ T ListaEnlazada<T>::obtenerElemento(int pos){
     else
         return actual->getElemento();
 }
+template int ListaEnlazada<int>::obtenerElemento(int);
 
 template<class T>
 void ListaEnlazada<T>::eliminarElemento(T elem){
     if(cabeza==0)
         return;
-    actual=cabeza;
     Elemento<T> *aux;
+    aux=cabeza;
+    if(aux->getElemento()==elem){
+        cabeza=aux->getSiguiente();
+        delete aux;
+        actual=cabeza;
+        return;
+    }
+    actual=cabeza;
     aux=actual->getSiguiente();
     while(aux!=0){
-        if(aux.getElemento()==elem){
+        if(aux->getElemento()==elem){
             actual->setSiguiente(aux->getSiguiente());
             delete aux;
+            return;
         }
         else{
             actual=aux;
@@ -106,6 +115,7 @@ void ListaEnlazada<T>::eliminarElemento(T elem){
         }
     }
 }
+template void ListaEnlazada<int>::eliminarElemento(int);
 
 template<class T>
 void ListaEnlazada<T>::recorrerLista(){
@@ -117,3 +127,9 @@ void ListaEnlazada<T>::recorrerLista(){
     cout<<endl;
 }
 template void ListaEnlazada<int>::recorrerLista();
+
+template<class T>
+void ListaEnlazada<T>::agregarElementoInicio(T elem){
+    agregarElemento(0,elem);
+}
+template void ListaEnlazada<int>::agregarElementoInicio(int);
