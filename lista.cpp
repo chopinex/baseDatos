@@ -1,5 +1,6 @@
 #include "lista.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 template<class T>
@@ -8,44 +9,50 @@ Elemento<T>::Elemento(T d){
     siguiente=0;
 }
 template Elemento<int>::Elemento(int);
+template Elemento<string>::Elemento(string);
 
 template<class T>
 T Elemento<T>::getElemento(){
     return dato;
 }
 template int Elemento<int>::getElemento();
+template string Elemento<string>::getElemento();
 
 template<class T>
 Elemento<T>* Elemento<T>::getSiguiente(){
     return siguiente;
 }
 template Elemento<int>* Elemento<int>::getSiguiente();
+template Elemento<string>* Elemento<string>::getSiguiente();
 
 template<class T>
 void Elemento<T>::setSiguiente(Elemento<T> *elem){
     siguiente=elem;
 }
 template void Elemento<int>::setSiguiente(Elemento*);
+template void Elemento<string>::setSiguiente(Elemento*);
 
 //----------------------------Lista------------------------------------
 template<class T>
 ListaEnlazada<T>::ListaEnlazada(){
     cabeza=0;
     actual=cabeza;
+    tamanyo=0;
 }
 template ListaEnlazada<int>::ListaEnlazada();
+template ListaEnlazada<string>::ListaEnlazada();
 
 template<class T>
 ListaEnlazada<T>::~ListaEnlazada(){
-    Elemento<T> *aux;
     while(cabeza){
-        aux=cabeza;
+        actual=cabeza;
         cabeza=cabeza->getSiguiente();
-        delete aux;
+        delete actual;
     }
     actual=0;
 }
 template ListaEnlazada<int>::~ListaEnlazada();
+template ListaEnlazada<string>::~ListaEnlazada();
 
 template <class T>
 void ListaEnlazada<T>::agregarElemento(int pos,T elem){
@@ -68,8 +75,10 @@ void ListaEnlazada<T>::agregarElemento(int pos,T elem){
         nuevo->setSiguiente(aux);
         actual=nuevo;
     }
+    tamanyo++;
 }
 template void ListaEnlazada<int>::agregarElemento(int,int);
+template void ListaEnlazada<string>::agregarElemento(int,string);
 
 template<class T>
 T ListaEnlazada<T>::obtenerElemento(int pos){
@@ -88,25 +97,27 @@ T ListaEnlazada<T>::obtenerElemento(int pos){
         return actual->getElemento();
 }
 template int ListaEnlazada<int>::obtenerElemento(int);
+template string ListaEnlazada<string>::obtenerElemento(int);
 
 template<class T>
 void ListaEnlazada<T>::eliminarElemento(T elem){
     if(cabeza==0)
         return;
-    Elemento<T> *aux;
-    aux=cabeza;
-    if(aux->getElemento()==elem){
-        cabeza=aux->getSiguiente();
-        delete aux;
+    actual=cabeza;
+    if(actual->getElemento()==elem){
+        cabeza=actual->getSiguiente();
+        delete actual;
         actual=cabeza;
+        tamanyo--;
         return;
     }
-    actual=cabeza;
+    Elemento<T> *aux;
     aux=actual->getSiguiente();
     while(aux!=0){
         if(aux->getElemento()==elem){
             actual->setSiguiente(aux->getSiguiente());
             delete aux;
+            tamanyo--;
             return;
         }
         else{
@@ -116,6 +127,7 @@ void ListaEnlazada<T>::eliminarElemento(T elem){
     }
 }
 template void ListaEnlazada<int>::eliminarElemento(int);
+template void ListaEnlazada<string>::eliminarElemento(string);
 
 template<class T>
 void ListaEnlazada<T>::recorrerLista(){
@@ -127,9 +139,25 @@ void ListaEnlazada<T>::recorrerLista(){
     cout<<endl;
 }
 template void ListaEnlazada<int>::recorrerLista();
+template void ListaEnlazada<string>::recorrerLista();
+
+template<class T>
+int ListaEnlazada<T>::getTamanyo(){
+    return tamanyo;
+}
+template int ListaEnlazada<int>::getTamanyo();
+template int ListaEnlazada<string>::getTamanyo();
 
 template<class T>
 void ListaEnlazada<T>::agregarElementoInicio(T elem){
     agregarElemento(0,elem);
 }
 template void ListaEnlazada<int>::agregarElementoInicio(int);
+template void ListaEnlazada<string>::agregarElementoInicio(string);
+
+template<class T>
+void ListaEnlazada<T>::agregarElementoFin(T elem){
+    agregarElemento(tamanyo,elem);
+}
+template void ListaEnlazada<int>::agregarElementoFin(int);
+template void ListaEnlazada<string>::agregarElementoFin(string);

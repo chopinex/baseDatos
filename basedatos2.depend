@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1509591229 source:d:\codeblocks\basedatos2\main.cpp
+1509925713 source:d:\codeblocks\basedatos2\main.cpp
 	"lista.h"
+	"basedatos.h"
 	<iostream>
+	<string>
 
 1509259600 d:\codeblocks\basedatos2\clases.h
 
@@ -9,9 +11,21 @@
 	"clases.h"
 	<iostream>
 
-1509591229 source:d:\codeblocks\basedatos2\lista.cpp
+1509899459 source:d:\codeblocks\basedatos2\lista.cpp
 	"lista.h"
 	<iostream>
+	<string>
 
-1509590853 d:\codeblocks\basedatos2\lista.h
+1509899291 d:\codeblocks\basedatos2\lista.h
+
+1509928923 source:d:\codeblocks\basedatos2\basedatos.cpp
+	"basedatos.h"
+	<fstream>
+	<iostream>
+	<string>
+	"lista.h"
+
+1509928923 d:\codeblocks\basedatos2\basedatos.h
+	<fstream>
+	"lista.h"
 

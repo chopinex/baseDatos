@@ -32,7 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="basedatos.cpp" />
 		<Unit filename="basedatos.h" />
+		<Unit filename="campo.h" />
 		<Unit filename="lista.cpp">
 			<Option weight="49" />
 		</Unit>
@@ -40,6 +42,7 @@
 		<Unit filename="main.cpp">
 			<Option weight="61" />
 		</Unit>
+		<Unit filename="tabla.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

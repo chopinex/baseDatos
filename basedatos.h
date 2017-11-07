@@ -1,19 +1,21 @@
 #ifndef BASEDATOS_H_INCLUDED
 #define BASEDATOS_H_INCLUDED
 
-
-
-#endif // BASEDATOS_H_INCLUDED
-#include <string>
+#include <fstream>
 #include "lista.h"
 
+using namespace std;
+
 class BaseDatos{
-    string nombreArchivo;
-    ListaEnlazada tablas;
+    const char *nombreArchivo;
+    ListaEnlazada<string> tablas;
 
 public:
-    BaseDatos(string);
-    ~BaseDatos();
-    void crearTabla();
-    void eliminarTabla();
+    BaseDatos(const char*);
+    // ~BaseDatos();
+    void mostrarTablas();
+    void crearTabla(string);
+    void eliminarTabla(string);
 };
+
+#endif // BASEDATOS_H_INCLUDED

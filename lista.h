@@ -1,8 +1,5 @@
-#ifndef CLASES_H_INCLUDED
-#define CLASES_H_INCLUDED
-
-
-#endif // CLASES_H_INCLUDED
+#ifndef LISTA_H_INCLUDED
+#define LISTA_H_INCLUDED
 
 template <class T>
 class Elemento{
@@ -20,6 +17,7 @@ template <class T>
 class ListaEnlazada{
     Elemento<T> *cabeza;
     Elemento<T> *actual;
+    int tamanyo;
 
 public:
     ListaEnlazada();
@@ -28,6 +26,9 @@ public:
     T obtenerElemento(int);
     void eliminarElemento(T);
     void recorrerLista();
+    int getTamanyo();
     void agregarElementoInicio(T);
-    //void agregarElementoFin(T);
+    void agregarElementoFin(T);
 };
+
+#endif // LISTA_H_INCLUDED
