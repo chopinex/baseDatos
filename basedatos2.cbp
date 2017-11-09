@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="basedatos.cpp" />
 		<Unit filename="basedatos.h" />
+		<Unit filename="campo.cpp" />
 		<Unit filename="campo.h" />
 		<Unit filename="lista.cpp">
 			<Option weight="49" />

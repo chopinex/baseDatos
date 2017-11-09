@@ -17,16 +17,34 @@ public:
     bool esObligatorio(){return obligatorio;};
 
     void setNombre(string nn){nombre=nn;};
-    virtual void agregarDato(){return;};
-    virtual void eliminarDato(){return;};
-    virtual void verDatos(){return;};
+    virtual void verDato(int){return;};
 };
 
 class CampoEntero : public Campo{
     ListaEnlazada<int> datos;
 
 public:
-    CampoEntero(string n,string t,bool i,bool o):Campo(n,t,i,o){};
+    CampoEntero(string n,bool i,bool o):Campo(n,"entero",i,o){};
+    void cambiarDato(int,int);
+    void verDato(int);
+};
+
+class CampoDecimal : public Campo{
+    ListaEnlazada<float> datos;
+
+public:
+    CampoDecimal(string n,bool i,bool o):Campo(n,"decimal",i,o){};
+    void cambiarDato(int,float);
+    void verDato(float);
+};
+
+class CampoCadena : public Campo{
+    ListaEnlazada<string> datos;
+
+public:
+    CampoCadena(string n,bool i,bool o):Campo(n,"cadena",i,o){};
+    void cambiarDato(int,string);
+    void verDato(string);
 };
 
 #endif // CAMPO_H_INCLUDED

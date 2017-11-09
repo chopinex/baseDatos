@@ -9,6 +9,7 @@ class Elemento{
 public:
     Elemento(T);
     T getElemento();
+    void setElemento(T);
     Elemento* getSiguiente();
     void setSiguiente(Elemento*);
 };
@@ -25,6 +26,7 @@ public:
     void agregarElemento(int,T);
     T obtenerElemento(int);
     void eliminarElemento(T);
+    void cambiarElemento(int,T);
     void recorrerLista();
     int getTamanyo();
     void agregarElementoInicio(T);

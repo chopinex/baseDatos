@@ -19,6 +19,13 @@ template int Elemento<int>::getElemento();
 template string Elemento<string>::getElemento();
 
 template<class T>
+void Elemento<T>::setElemento(T nuevoDato){
+    dato=nuevoDato;
+}
+template void Elemento<int>::setElemento(int);
+template void Elemento<string>::setElemento(string);
+
+template<class T>
 Elemento<T>* Elemento<T>::getSiguiente(){
     return siguiente;
 }
@@ -98,6 +105,19 @@ T ListaEnlazada<T>::obtenerElemento(int pos){
 }
 template int ListaEnlazada<int>::obtenerElemento(int);
 template string ListaEnlazada<string>::obtenerElemento(int);
+
+template<class T>
+void ListaEnlazada<T>::cambiarElemento(int pos, T nuevoDato){
+    if(pos>=tamanyo)
+        cerr<<"Dato fuera de rango."<<endl;
+    else{
+        actual=cabeza;
+        for(int i=0;i<pos;i++)
+            actual=actual->siguiente;
+        actual->setElemento(nuevoDato);
+    }
+
+}
 
 template<class T>
 void ListaEnlazada<T>::eliminarElemento(T elem){
