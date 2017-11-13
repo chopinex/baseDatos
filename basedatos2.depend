@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1509925713 source:d:\codeblocks\basedatos2\main.cpp
+1510509223 source:d:\codeblocks\basedatos2\main.cpp
 	"lista.h"
 	"basedatos.h"
+	"campo.h"
+	"tabla.h"
 	<iostream>
 	<string>
 
@@ -11,12 +13,13 @@
 	"clases.h"
 	<iostream>
 
-1510205744 source:d:\codeblocks\basedatos2\lista.cpp
+1510532832 source:d:\codeblocks\basedatos2\lista.cpp
 	"lista.h"
+	"campo.h"
 	<iostream>
 	<string>
 
-1510205441 d:\codeblocks\basedatos2\lista.h
+1510413716 d:\codeblocks\basedatos2\lista.h
 
 1509928923 source:d:\codeblocks\basedatos2\basedatos.cpp
 	"basedatos.h"
@@ -28,4 +31,174 @@
 1509928923 d:\codeblocks\basedatos2\basedatos.h
 	<fstream>
 	"lista.h"
+
+1510241786 source:c:\users\enei-15\downloads\basedatos-master\basedatos.cpp
+	"basedatos.h"
+	<fstream>
+	<iostream>
+	<string>
+	"lista.h"
+
+1510241786 c:\users\enei-15\downloads\basedatos-master\basedatos.h
+	<fstream>
+	"lista.h"
+
+1510241786 c:\users\enei-15\downloads\basedatos-master\lista.h
+
+1510241786 source:c:\users\enei-15\downloads\basedatos-master\campo.cpp
+	"campo.h"
+	<iostream>
+
+1510241786 c:\users\enei-15\downloads\basedatos-master\campo.h
+	<string>
+	"lista.h"
+
+1510241786 source:c:\users\enei-15\downloads\basedatos-master\main.cpp
+	"lista.h"
+	"basedatos.h"
+	<iostream>
+	<string>
+
+1510267490 source:c:\users\enei-15\downloads\basedatos-master\lista.cpp
+	"lista.h"
+	<iostream>
+	<string>
+
+1510537334 source:d:\codeblocks\basedatos2\campo.cpp
+	"campo.h"
+	<iostream>
+	<string>
+
+1510536942 d:\codeblocks\basedatos2\campo.h
+	<string>
+	<iostream>
+	"lista.h"
+
+1510507359 source:d:\codeblocks\basedatos2\tabla.cpp
+	<string>
+	"tabla.h"
+
+1510538041 d:\codeblocks\basedatos2\tabla.h
+	"lista.h"
+	"campo.h"
+	<string>
+
+1510500784 d:\sfml-2.4.2\include\sfml\system.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/FileInputStream.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/Lock.hpp>
+	<SFML/System/MemoryInputStream.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/ThreadLocal.hpp>
+	<SFML/System/ThreadLocalPtr.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1510500784 d:\sfml-2.4.2\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\time.hpp
+	<SFML/System/Export.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\err.hpp
+	<SFML/System/Export.hpp>
+	<ostream>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\fileinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdio>
+	<string>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\inputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\noncopyable.hpp
+	<SFML/System/Export.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\lock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\memoryinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/Export.hpp>
+	<cstdlib>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\mutex.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\sleep.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Utf.hpp>
+	<iterator>
+	<locale>
+	<string>
+	<SFML/System/String.inl>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\utf.hpp
+	<SFML/Config.hpp>
+	<algorithm>
+	<locale>
+	<string>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\utf.inl
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\string.inl
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\thread.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdlib>
+	<SFML/System/Thread.inl>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\thread.inl
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\threadlocal.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdlib>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\threadlocalptr.hpp
+	<SFML/System/ThreadLocal.hpp>
+	<SFML/System/ThreadLocalPtr.inl>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\threadlocalptr.inl
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\vector2.hpp
+	<SFML/System/Vector2.inl>
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\vector2.inl
+
+1510500786 d:\sfml-2.4.2\include\sfml\system\vector3.hpp
+	<SFML/System/Vector3.inl>
+
+1510500787 d:\sfml-2.4.2\include\sfml\system\vector3.inl
 

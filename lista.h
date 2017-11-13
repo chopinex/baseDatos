@@ -26,6 +26,7 @@ public:
     void agregarElemento(int,T);
     T obtenerElemento(int);
     void eliminarElemento(T);
+    void eliminarElementoPos(int);
     void cambiarElemento(int,T);
     void recorrerLista();
     int getTamanyo();
