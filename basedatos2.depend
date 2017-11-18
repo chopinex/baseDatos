@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1510509223 source:d:\codeblocks\basedatos2\main.cpp
+1510978800 source:d:\codeblocks\basedatos2\main.cpp
 	"lista.h"
 	"basedatos.h"
 	"campo.h"
@@ -13,7 +13,7 @@
 	"clases.h"
 	<iostream>
 
-1510532832 source:d:\codeblocks\basedatos2\lista.cpp
+1510978977 source:d:\codeblocks\basedatos2\lista.cpp
 	"lista.h"
 	"campo.h"
 	<iostream>
@@ -64,21 +64,21 @@
 	<iostream>
 	<string>
 
-1510537334 source:d:\codeblocks\basedatos2\campo.cpp
+1510948872 source:d:\codeblocks\basedatos2\campo.cpp
 	"campo.h"
 	<iostream>
 	<string>
 
-1510536942 d:\codeblocks\basedatos2\campo.h
+1510947965 d:\codeblocks\basedatos2\campo.h
 	<string>
 	<iostream>
 	"lista.h"
 
-1510507359 source:d:\codeblocks\basedatos2\tabla.cpp
+1510980439 source:d:\codeblocks\basedatos2\tabla.cpp
 	<string>
 	"tabla.h"
 
-1510538041 d:\codeblocks\basedatos2\tabla.h
+1510978883 d:\codeblocks\basedatos2\tabla.h
 	"lista.h"
 	"campo.h"
 	<string>

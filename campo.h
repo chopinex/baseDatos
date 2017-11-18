@@ -17,10 +17,12 @@ public:
     string getTipo(){return tipo;};
     bool esIndexado(){return indexado;};
     bool esObligatorio(){return obligatorio;};
-
     void setNombre(string nn){nombre=nn;};
+
     virtual void agregarDato(string){return;};
+    virtual string verDato(int){return "";};
     virtual int numeroDatos(){return 0;};
+    virtual void eliminarDato(int){return;};
 
     bool operator==(Campo);
 
@@ -31,36 +33,39 @@ public:
 };
 
 class CampoEntero : public Campo{
-    ListaEnlazada<int> datos;
 
 public:
+    ListaEnlazada<int> datos;
     CampoEntero(string n,bool i,bool o):Campo(n,"entero",i,o){};
-    void cambiarDato(int,int);
-    int verDato(int);
+    void cambiarDato(int,string);
+    string verDato(int);
     void agregarDato(string);
     int numeroDatos();
+    void eliminarDato(int);
 };
 
 class CampoDecimal : public Campo{
-    ListaEnlazada<float> datos;
 
 public:
+    ListaEnlazada<float> datos;
     CampoDecimal(string n,bool i,bool o):Campo(n,"decimal",i,o){};
-    void cambiarDato(int,float);
-    float verDato(int);
+    void cambiarDato(int,string);
+    string verDato(int);
     void agregarDato(string);
     int numeroDatos();
+    void eliminarDato(int);
 };
 
 class CampoCadena : public Campo{
-    ListaEnlazada<string> datos;
 
 public:
+    ListaEnlazada<string> datos;
     CampoCadena(string n,bool i,bool o):Campo(n,"cadena",i,o){};
     void cambiarDato(int,string);
     string verDato(int);
     void agregarDato(string);
     int numeroDatos();
+    void eliminarDato(int);
 };
 
 #endif // CAMPO_H_INCLUDED

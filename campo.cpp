@@ -10,23 +10,26 @@ bool Campo::operator==(Campo c){
     return false;
 }
 
-void CampoEntero::cambiarDato(int pos,int nuevoDato){
-    datos.cambiarElemento(pos,nuevoDato);
+void CampoEntero::cambiarDato(int pos,string nuevoDato){
+    datos.cambiarElemento(pos,stoi(nuevoDato));
 }
 
-int CampoEntero::verDato(int pos){
+string CampoEntero::verDato(int pos){
     if(pos>=datos.getTamanyo()){
         cerr<<"Valor fuera de rango";
-        return 0;
+        return "";
     }
     else
-        return datos.obtenerElemento(pos);
+        return to_string(datos.obtenerElemento(pos));
 }
 
 void CampoEntero::agregarDato(string entrada){
     int nuevoDato;
-    if(nuevoDato=stoi(entrada))
+    if(nuevoDato=stoi(entrada)){
+        cout<<"Dato agregado"<<endl;
         datos.agregarElementoFin(nuevoDato);
+    }
+
     else
         cerr<<"Tipo de dato incorrecto"<<endl;
 }
@@ -35,29 +38,49 @@ int CampoEntero::numeroDatos(){
     return datos.getTamanyo();
 }
 
-void CampoDecimal::cambiarDato(int pos,float nuevoDato){
-    datos.cambiarElemento(pos,nuevoDato);
-}
-
-float CampoDecimal::verDato(int pos){
+void CampoEntero::eliminarDato(int pos){
     if(pos>=datos.getTamanyo()){
         cerr<<"Valor fuera de rango";
-        return 0.0;
+        return;
     }
     else
-        return datos.obtenerElemento(pos);
+        datos.eliminarElementoPos(pos);
+}
+
+void CampoDecimal::cambiarDato(int pos,string nuevoDato){
+    datos.cambiarElemento(pos,stof(nuevoDato));
+}
+
+string CampoDecimal::verDato(int pos){
+    if(pos>=datos.getTamanyo()){
+        cerr<<"Valor fuera de rango";
+        return "";
+    }
+    else
+        return to_string(datos.obtenerElemento(pos));
 }
 
 void CampoDecimal::agregarDato(string entrada){
     float nuevoDato;
-    if(nuevoDato=stof(entrada))
+    if(nuevoDato=stof(entrada)){
+        cout<<"Dato agregado"<<endl;
         datos.agregarElementoFin(nuevoDato);
+    }
     else
         cerr<<"Tipo de dato incorrecto"<<endl;
 }
 
 int CampoDecimal::numeroDatos(){
     return datos.getTamanyo();
+}
+
+void CampoDecimal::eliminarDato(int pos){
+    if(pos>=datos.getTamanyo()){
+        cerr<<"Valor fuera de rango";
+        return;
+    }
+    else
+        datos.eliminarElementoPos(pos);
 }
 
 void CampoCadena::cambiarDato(int pos,string nuevoDato){
@@ -78,5 +101,15 @@ int CampoCadena::numeroDatos(){
 }
 
 void CampoCadena::agregarDato(string entrada){
+    cout<<"Dato agregado"<<endl;
     datos.agregarElementoFin(entrada);
+}
+
+void CampoCadena::eliminarDato(int pos){
+    if(pos>=datos.getTamanyo()){
+        cerr<<"Valor fuera de rango";
+        return;
+    }
+    else
+        datos.eliminarElementoPos(pos);
 }

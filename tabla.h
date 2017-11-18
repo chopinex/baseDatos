@@ -9,13 +9,17 @@ using namespace std;
 
 class Tabla{
     const char* nombreTabla;
-    ListaEnlazada<Campo> camposTabla;
+    ListaEnlazada<Campo*> camposTabla;
+
 public:
     Tabla(const char*);
-    void insertarCampo(Campo);
+    ~Tabla();
+
+    void insertarCampo(string,string,bool,bool);
     void eliminarCampo(string);
     void verCampos();
     void insertarRegistro(ListaEnlazada<string>);
     ListaEnlazada<string> leerRegistro(int);
+    void eliminarRegistro(int);
 };
 #endif // TABLA_H_INCLUDED

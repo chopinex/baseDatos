@@ -13,7 +13,7 @@ Elemento<T>::Elemento(T d){
 template Elemento<int>::Elemento(int);
 template Elemento<string>::Elemento(string);
 template Elemento<float>::Elemento(float);
-template Elemento<Campo>::Elemento(Campo);
+template Elemento<Campo*>::Elemento(Campo*);
 
 template<class T>
 T Elemento<T>::getElemento(){
@@ -22,7 +22,7 @@ T Elemento<T>::getElemento(){
 template int Elemento<int>::getElemento();
 template string Elemento<string>::getElemento();
 template float Elemento<float>::getElemento();
-template Campo Elemento<Campo>::getElemento();
+template Campo* Elemento<Campo*>::getElemento();
 
 template<class T>
 void Elemento<T>::setElemento(T nuevoDato){
@@ -31,7 +31,7 @@ void Elemento<T>::setElemento(T nuevoDato){
 template void Elemento<int>::setElemento(int);
 template void Elemento<string>::setElemento(string);
 template void Elemento<float>::setElemento(float);
-template void Elemento<Campo>::setElemento(Campo);
+template void Elemento<Campo*>::setElemento(Campo*);
 
 template<class T>
 Elemento<T>* Elemento<T>::getSiguiente(){
@@ -40,7 +40,7 @@ Elemento<T>* Elemento<T>::getSiguiente(){
 template Elemento<int>* Elemento<int>::getSiguiente();
 template Elemento<string>* Elemento<string>::getSiguiente();
 template Elemento<float>* Elemento<float>::getSiguiente();
-template Elemento<Campo>* Elemento<Campo>::getSiguiente();
+template Elemento<Campo*>* Elemento<Campo*>::getSiguiente();
 
 template<class T>
 void Elemento<T>::setSiguiente(Elemento<T> *elem){
@@ -49,7 +49,7 @@ void Elemento<T>::setSiguiente(Elemento<T> *elem){
 template void Elemento<int>::setSiguiente(Elemento*);
 template void Elemento<string>::setSiguiente(Elemento*);
 template void Elemento<float>::setSiguiente(Elemento*);
-template void Elemento<Campo>::setSiguiente(Elemento*);
+template void Elemento<Campo*>::setSiguiente(Elemento*);
 
 //----------------------------Lista------------------------------------
 template<class T>
@@ -61,7 +61,7 @@ ListaEnlazada<T>::ListaEnlazada(){
 template ListaEnlazada<int>::ListaEnlazada();
 template ListaEnlazada<string>::ListaEnlazada();
 template ListaEnlazada<float>::ListaEnlazada();
-template ListaEnlazada<Campo>::ListaEnlazada();
+template ListaEnlazada<Campo*>::ListaEnlazada();
 
 template<class T>
 ListaEnlazada<T>::~ListaEnlazada(){
@@ -75,7 +75,7 @@ ListaEnlazada<T>::~ListaEnlazada(){
 template ListaEnlazada<int>::~ListaEnlazada();
 template ListaEnlazada<string>::~ListaEnlazada();
 template ListaEnlazada<float>::~ListaEnlazada();
-template ListaEnlazada<Campo>::~ListaEnlazada();
+template ListaEnlazada<Campo*>::~ListaEnlazada();
 
 template <class T>
 void ListaEnlazada<T>::agregarElemento(int pos,T elem){
@@ -103,7 +103,7 @@ void ListaEnlazada<T>::agregarElemento(int pos,T elem){
 template void ListaEnlazada<int>::agregarElemento(int,int);
 template void ListaEnlazada<string>::agregarElemento(int,string);
 template void ListaEnlazada<float>::agregarElemento(int,float);
-template void ListaEnlazada<Campo>::agregarElemento(int,Campo);
+template void ListaEnlazada<Campo*>::agregarElemento(int,Campo*);
 
 template<class T>
 T ListaEnlazada<T>::obtenerElemento(int pos){
@@ -119,7 +119,7 @@ T ListaEnlazada<T>::obtenerElemento(int pos){
 template int ListaEnlazada<int>::obtenerElemento(int);
 template string ListaEnlazada<string>::obtenerElemento(int);
 template float ListaEnlazada<float>::obtenerElemento(int);
-template Campo ListaEnlazada<Campo>::obtenerElemento(int);
+template Campo* ListaEnlazada<Campo*>::obtenerElemento(int);
 
 template<class T>
 void ListaEnlazada<T>::cambiarElemento(int pos, T nuevoDato){
@@ -136,7 +136,7 @@ void ListaEnlazada<T>::cambiarElemento(int pos, T nuevoDato){
 template void ListaEnlazada<int>::cambiarElemento(int,int);
 template void ListaEnlazada<string>::cambiarElemento(int,string);
 template void ListaEnlazada<float>::cambiarElemento(int,float);
-template void ListaEnlazada<Campo>::cambiarElemento(int,Campo);
+template void ListaEnlazada<Campo*>::cambiarElemento(int,Campo*);
 
 template<class T>
 void ListaEnlazada<T>::eliminarElemento(T elem){
@@ -168,7 +168,7 @@ void ListaEnlazada<T>::eliminarElemento(T elem){
 template void ListaEnlazada<int>::eliminarElemento(int);
 template void ListaEnlazada<string>::eliminarElemento(string);
 template void ListaEnlazada<float>::eliminarElemento(float);
-template void ListaEnlazada<Campo>::eliminarElemento(Campo);
+template void ListaEnlazada<Campo*>::eliminarElemento(Campo*);
 
 template<class T>
 void ListaEnlazada<T>::eliminarElementoPos(int pos){
@@ -179,7 +179,7 @@ void ListaEnlazada<T>::eliminarElementoPos(int pos){
 template void ListaEnlazada<int>::eliminarElementoPos(int);
 template void ListaEnlazada<string>::eliminarElementoPos(int);
 template void ListaEnlazada<float>::eliminarElementoPos(int);
-template void ListaEnlazada<Campo>::eliminarElementoPos(int);
+template void ListaEnlazada<Campo*>::eliminarElementoPos(int);
 
 template<class T>
 void ListaEnlazada<T>::recorrerLista(){
@@ -193,7 +193,7 @@ void ListaEnlazada<T>::recorrerLista(){
 template void ListaEnlazada<int>::recorrerLista();
 template void ListaEnlazada<string>::recorrerLista();
 template void ListaEnlazada<float>::recorrerLista();
-template void ListaEnlazada<Campo>::recorrerLista();
+template void ListaEnlazada<Campo*>::recorrerLista();
 
 template<class T>
 int ListaEnlazada<T>::getTamanyo(){
@@ -202,7 +202,7 @@ int ListaEnlazada<T>::getTamanyo(){
 template int ListaEnlazada<int>::getTamanyo();
 template int ListaEnlazada<string>::getTamanyo();
 template int ListaEnlazada<float>::getTamanyo();
-template int ListaEnlazada<Campo>::getTamanyo();
+template int ListaEnlazada<Campo*>::getTamanyo();
 
 template<class T>
 void ListaEnlazada<T>::agregarElementoInicio(T elem){
@@ -211,7 +211,7 @@ void ListaEnlazada<T>::agregarElementoInicio(T elem){
 template void ListaEnlazada<int>::agregarElementoInicio(int);
 template void ListaEnlazada<string>::agregarElementoInicio(string);
 template void ListaEnlazada<float>::agregarElementoInicio(float);
-template void ListaEnlazada<Campo>::agregarElementoInicio(Campo);
+template void ListaEnlazada<Campo*>::agregarElementoInicio(Campo*);
 
 template<class T>
 void ListaEnlazada<T>::agregarElementoFin(T elem){
@@ -220,4 +220,4 @@ void ListaEnlazada<T>::agregarElementoFin(T elem){
 template void ListaEnlazada<int>::agregarElementoFin(int);
 template void ListaEnlazada<string>::agregarElementoFin(string);
 template void ListaEnlazada<float>::agregarElementoFin(float);
-template void ListaEnlazada<Campo>::agregarElementoFin(Campo);
+template void ListaEnlazada<Campo*>::agregarElementoFin(Campo*);
