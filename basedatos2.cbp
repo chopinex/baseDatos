@@ -29,6 +29,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
@@ -36,6 +37,8 @@
 		<Unit filename="basedatos.h" />
 		<Unit filename="campo.cpp" />
 		<Unit filename="campo.h" />
+		<Unit filename="indice.cpp" />
+		<Unit filename="indice.h" />
 		<Unit filename="lista.cpp">
 			<Option weight="49" />
 		</Unit>

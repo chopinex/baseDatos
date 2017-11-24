@@ -19,6 +19,7 @@ public:
     bool esObligatorio(){return obligatorio;};
     void setNombre(string nn){nombre=nn;};
 
+    virtual ~Campo(){};
     virtual void agregarDato(string){return;};
     virtual string verDato(int){return "";};
     virtual int numeroDatos(){return 0;};
@@ -37,6 +38,7 @@ class CampoEntero : public Campo{
 public:
     ListaEnlazada<int> datos;
     CampoEntero(string n,bool i,bool o):Campo(n,"entero",i,o){};
+    ~CampoEntero(){};
     void cambiarDato(int,string);
     string verDato(int);
     void agregarDato(string);
@@ -49,6 +51,7 @@ class CampoDecimal : public Campo{
 public:
     ListaEnlazada<float> datos;
     CampoDecimal(string n,bool i,bool o):Campo(n,"decimal",i,o){};
+    ~CampoDecimal(){};
     void cambiarDato(int,string);
     string verDato(int);
     void agregarDato(string);
@@ -61,6 +64,7 @@ class CampoCadena : public Campo{
 public:
     ListaEnlazada<string> datos;
     CampoCadena(string n,bool i,bool o):Campo(n,"cadena",i,o){};
+    ~CampoCadena(){};
     void cambiarDato(int,string);
     string verDato(int);
     void agregarDato(string);

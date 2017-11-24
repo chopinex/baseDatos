@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1510978800 source:d:\codeblocks\basedatos2\main.cpp
+1511503761 source:d:\codeblocks\basedatos2\main.cpp
 	"lista.h"
 	"basedatos.h"
 	"campo.h"
@@ -64,23 +64,26 @@
 	<iostream>
 	<string>
 
-1510948872 source:d:\codeblocks\basedatos2\campo.cpp
+1511502430 source:d:\codeblocks\basedatos2\campo.cpp
 	"campo.h"
 	<iostream>
 	<string>
+	<stdlib.h>
+	<stdio.h>
 
-1510947965 d:\codeblocks\basedatos2\campo.h
+1511038989 d:\codeblocks\basedatos2\campo.h
 	<string>
 	<iostream>
 	"lista.h"
 
-1510980439 source:d:\codeblocks\basedatos2\tabla.cpp
+1511501817 source:d:\codeblocks\basedatos2\tabla.cpp
 	<string>
 	"tabla.h"
 
-1510978883 d:\codeblocks\basedatos2\tabla.h
+1511501857 d:\codeblocks\basedatos2\tabla.h
 	"lista.h"
 	"campo.h"
+	"indice.h"
 	<string>
 
 1510500784 d:\sfml-2.4.2\include\sfml\system.hpp
@@ -201,4 +204,66 @@
 	<SFML/System/Vector3.inl>
 
 1510500787 d:\sfml-2.4.2\include\sfml\system\vector3.inl
+
+1510978977 source:e:\usb\basedatos2\lista.cpp
+	"lista.h"
+	"campo.h"
+	<iostream>
+	<string>
+
+1510413716 e:\usb\basedatos2\lista.h
+
+1511022498 e:\usb\basedatos2\campo.h
+	<string>
+	<iostream>
+	"lista.h"
+
+1509928923 source:e:\usb\basedatos2\basedatos.cpp
+	"basedatos.h"
+	<fstream>
+	<iostream>
+	<string>
+	"lista.h"
+
+1509928923 e:\usb\basedatos2\basedatos.h
+	<fstream>
+	"lista.h"
+
+1511021225 source:e:\usb\basedatos2\campo.cpp
+	"campo.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+
+1511012979 source:e:\usb\basedatos2\tabla.cpp
+	<string>
+	"tabla.h"
+
+1511022790 e:\usb\basedatos2\tabla.h
+	"lista.h"
+	"campo.h"
+	<string>
+
+1511021612 source:e:\usb\basedatos2\main.cpp
+	"lista.h"
+	"basedatos.h"
+	"campo.h"
+	"tabla.h"
+	<iostream>
+	<string>
+
+1511501682 source:d:\codeblocks\basedatos2\indice.cpp
+	<vector>
+	<utility>
+	<algorithm>
+	<iostream>
+	<string>
+	<stdlib.h>
+	"indice.h"
+
+1511501912 d:\codeblocks\basedatos2\indice.h
+	<vector>
+	<utility>
+	<string>
 

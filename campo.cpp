@@ -1,6 +1,8 @@
 #include "campo.h"
 #include <iostream>
 #include <string>
+#include <stdlib.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -11,7 +13,7 @@ bool Campo::operator==(Campo c){
 }
 
 void CampoEntero::cambiarDato(int pos,string nuevoDato){
-    datos.cambiarElemento(pos,stoi(nuevoDato));
+    datos.cambiarElemento(pos,atoi(nuevoDato.c_str()));
 }
 
 string CampoEntero::verDato(int pos){
@@ -19,14 +21,18 @@ string CampoEntero::verDato(int pos){
         cerr<<"Valor fuera de rango";
         return "";
     }
-    else
-        return to_string(datos.obtenerElemento(pos));
+    else{
+        char intStr[33];
+        int dato=datos.obtenerElemento(pos);
+        sprintf(intStr,"%d",dato);
+        return string(intStr);
+    }
 }
 
 void CampoEntero::agregarDato(string entrada){
     int nuevoDato;
-    if(nuevoDato=stoi(entrada)){
-        cout<<"Dato agregado"<<endl;
+    if((nuevoDato=atoi(entrada.c_str()))){
+        //cout<<"Dato agregado"<<endl;
         datos.agregarElementoFin(nuevoDato);
     }
 
@@ -48,7 +54,7 @@ void CampoEntero::eliminarDato(int pos){
 }
 
 void CampoDecimal::cambiarDato(int pos,string nuevoDato){
-    datos.cambiarElemento(pos,stof(nuevoDato));
+    datos.cambiarElemento(pos,atof(nuevoDato.c_str()));
 }
 
 string CampoDecimal::verDato(int pos){
@@ -56,14 +62,18 @@ string CampoDecimal::verDato(int pos){
         cerr<<"Valor fuera de rango";
         return "";
     }
-    else
-        return to_string(datos.obtenerElemento(pos));
+    else{
+        char intStr[33];
+        float dato=datos.obtenerElemento(pos);
+        sprintf(intStr,"%f",dato);
+        return string(intStr);
+    }
 }
 
 void CampoDecimal::agregarDato(string entrada){
     float nuevoDato;
-    if(nuevoDato=stof(entrada)){
-        cout<<"Dato agregado"<<endl;
+    if((nuevoDato=atof(entrada.c_str()))){
+        //cout<<"Dato agregado"<<endl;
         datos.agregarElementoFin(nuevoDato);
     }
     else
@@ -101,7 +111,7 @@ int CampoCadena::numeroDatos(){
 }
 
 void CampoCadena::agregarDato(string entrada){
-    cout<<"Dato agregado"<<endl;
+    //cout<<"Dato agregado"<<endl;
     datos.agregarElementoFin(entrada);
 }
 

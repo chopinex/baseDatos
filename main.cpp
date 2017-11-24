@@ -28,16 +28,34 @@ int main()
     //nombre.agregarDato(entrada);
     //sueldo.agregarDato(flotante);
     Tabla persona("Persona");
-    persona.insertarCampo("nombre","cadena",false,false);
+    persona.insertarCampo("nombre","cadena",true,false);
     persona.insertarCampo("edad","entero",false,false);
     persona.insertarCampo("sueldo","decimal",false,false);
     persona.verCampos();
     ListaEnlazada<string> le;
     le.agregarElementoFin("Jose");
-    le.agregarElementoInicio("33");
-    le.agregarElemento(1,"0.4");
+    le.agregarElementoFin("33");
+    le.agregarElementoFin("0.4");
     persona.insertarRegistro(le);
+
+    ListaEnlazada<string> le2;
+    le2.agregarElementoFin("Juan");
+    le2.agregarElementoFin("20");
+    le2.agregarElementoFin("2.4");
+    persona.insertarRegistro(le2);
+
+    ListaEnlazada<string> le3;
+    le3.agregarElementoFin("Pedro");
+    le3.agregarElementoFin("45");
+    le3.agregarElementoFin("4.6");
+    persona.insertarRegistro(le3);
     //persona.camposTabla.obtenerElemento(0);
-    persona.leerRegistro(0).recorrerLista();
+    persona.leerRegistro(1).recorrerLista();
+    string buscar;
+    cout<<"buscar nombre: ";
+    cin>>buscar;
+    ListaEnlazada<string> resultado;
+    resultado=persona.buscarRegistro(buscar);
+    resultado.recorrerLista();
     return 0;
 }
