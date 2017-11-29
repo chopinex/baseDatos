@@ -33,6 +33,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="baseDatosControl.cpp" />
+		<Unit filename="baseDatosControl.h" />
+		<Unit filename="baseDatosVista.cpp" />
+		<Unit filename="baseDatosVista.h" />
 		<Unit filename="basedatos.cpp" />
 		<Unit filename="basedatos.h" />
 		<Unit filename="campo.cpp" />
@@ -48,6 +52,10 @@
 		</Unit>
 		<Unit filename="tabla.cpp" />
 		<Unit filename="tabla.h" />
+		<Unit filename="tablaControl.cpp" />
+		<Unit filename="tablaControl.h" />
+		<Unit filename="tablaVista.h" />
+		<Unit filename="tablavista.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

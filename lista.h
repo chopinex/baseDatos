@@ -16,22 +16,23 @@ public:
 
 template <class T>
 class ListaEnlazada{
-    Elemento<T> *cabeza;
-    Elemento<T> *actual;
+    mutable Elemento<T> *cabeza;
+    mutable Elemento<T> *actual;
     int tamanyo;
 
 public:
     ListaEnlazada();
     ~ListaEnlazada();
     void agregarElemento(int,T);
-    T obtenerElemento(int);
+    T obtenerElemento(int) const;
     void eliminarElemento(T);
     void eliminarElementoPos(int);
     void cambiarElemento(int,T);
     void recorrerLista();
-    int getTamanyo();
+    int getTamanyo() const;
     void agregarElementoInicio(T);
     void agregarElementoFin(T);
+    void vaciarLista();
 };
 
 #endif // LISTA_H_INCLUDED

@@ -6,12 +6,6 @@
 
 using namespace std;
 
-bool Campo::operator==(Campo c){
-    if(nombre==c.getNombre()&&tipo==c.getTipo())
-        return true;
-    return false;
-}
-
 void CampoEntero::cambiarDato(int pos,string nuevoDato){
     datos.cambiarElemento(pos,atoi(nuevoDato.c_str()));
 }

@@ -6,17 +6,17 @@
 #include "lista.h"
 
 using namespace std;
+
 class Campo{
     string nombre,tipo;
-    bool indexado,obligatorio;
+    bool indexado;
 
 public:
-    Campo(){nombre="";tipo="";indexado=false;obligatorio=false;};
-    Campo(string n,string t,bool i,bool o) : nombre(n), tipo(t), indexado(i), obligatorio(i){};
+    Campo(){nombre="";tipo="";indexado=false;};
+    Campo(string n,string t,bool i) : nombre(n), tipo(t), indexado(i){};
     string getNombre(){return nombre;};
     string getTipo(){return tipo;};
     bool esIndexado(){return indexado;};
-    bool esObligatorio(){return obligatorio;};
     void setNombre(string nn){nombre=nn;};
 
     virtual ~Campo(){};
@@ -25,7 +25,7 @@ public:
     virtual int numeroDatos(){return 0;};
     virtual void eliminarDato(int){return;};
 
-    bool operator==(Campo);
+    //bool operator==(Campo);
 
     friend ostream& operator<<(ostream &os, const Campo &c){
         os<<c.nombre<<" ("<<c.tipo<<")";
@@ -37,7 +37,7 @@ class CampoEntero : public Campo{
 
 public:
     ListaEnlazada<int> datos;
-    CampoEntero(string n,bool i,bool o):Campo(n,"entero",i,o){};
+    CampoEntero(string n,bool i):Campo(n,"entero",i){};
     ~CampoEntero(){};
     void cambiarDato(int,string);
     string verDato(int);
@@ -50,7 +50,7 @@ class CampoDecimal : public Campo{
 
 public:
     ListaEnlazada<float> datos;
-    CampoDecimal(string n,bool i,bool o):Campo(n,"decimal",i,o){};
+    CampoDecimal(string n,bool i):Campo(n,"decimal",i){};
     ~CampoDecimal(){};
     void cambiarDato(int,string);
     string verDato(int);
@@ -63,7 +63,7 @@ class CampoCadena : public Campo{
 
 public:
     ListaEnlazada<string> datos;
-    CampoCadena(string n,bool i,bool o):Campo(n,"cadena",i,o){};
+    CampoCadena(string n,bool i):Campo(n,"cadena",i){};
     ~CampoCadena(){};
     void cambiarDato(int,string);
     string verDato(int);
